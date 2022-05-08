@@ -19,14 +19,16 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<TableUser />} />
+          <Route path="/" element={<TableUser person={this.state.persons} />} />
           {this.state.persons.map((person) => {
             return (
-              <Route
-                key={person.id}
-                path={`/${person.id}`}
-                element={<ProfileInfo person={person} />}
-              />
+              <>
+                <Route
+                  key={person.id}
+                  path={`/${person.id}`}
+                  element={<ProfileInfo person={person} />}
+                />
+              </>
             );
           })}
         </Routes>
