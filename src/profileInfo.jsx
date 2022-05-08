@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ProfileInfo({ person }) {
   return (
-    <TableContainer mt="100px">
+    <TableContainer>
       <Table variant="simple" colorScheme="linkedin">
         <Thead>
           <Tr>

@@ -17,9 +17,9 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <>
-        <TableUser />
+      <BrowserRouter>
         <Routes>
+          <Route path="/" element={<TableUser />} />
           {this.state.persons.map((person) => {
             return (
               <Route
@@ -30,7 +30,7 @@ export default class App extends React.Component {
             );
           })}
         </Routes>
-      </>
+      </BrowserRouter>
     );
   }
 }
